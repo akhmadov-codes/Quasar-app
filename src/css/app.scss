@@ -1,1 +1,12 @@
 // app global css in SCSS form
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh; /* Sahifa balandligini ekran bilan cheklaymiz */
+}
+.text-h6,
+.text-h5 {
+  font-weight: 700; // Sarlavhalarni qalinroq qilish uchun
+}

@@ -109,7 +109,14 @@ export default defineConfig((ctx) => {
       // directives: [],
 
       // Quasar plugins
-      plugins: [],
+      plugins: ['Notify', 'Dialog'],
+      config: {
+        notify: {
+          position: 'top-right',
+          timeout: 2500,
+          textColor: 'white',
+        },
+      },
     },
 
     // animations: 'all', // --- includes all animations
