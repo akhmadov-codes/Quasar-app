@@ -22,7 +22,7 @@ export const useProductStore = defineStore('product', {
         this.nextPage = response.data.next
         this.previousPage = response.data.previous
       } catch (error) {
-        this.error = 'Mahsulotlarni yuklashda xato'
+        this.error = 'Error: mahsulotlarni yuklashda xato'
         console.error('Xato:', error)
       } finally {
         this.loading = false
@@ -49,7 +49,7 @@ export const useProductStore = defineStore('product', {
         this.products.unshift(response.data)
         return true
       } catch (error) {
-        console.error("Qo'shishda xato:", error)
+        console.error("Error:", error)
         return false
       } finally {
         this.loading = false
@@ -70,7 +70,7 @@ export const useProductStore = defineStore('product', {
       } catch (error) {
         console.error('Tahrirlashda xato:', error)
         if (error.response) {
-          console.log('Backend javobi:', error.response.data)
+          console.log('Error:', error.response.data)
         }
         return false
       } finally {
@@ -83,7 +83,7 @@ export const useProductStore = defineStore('product', {
         this.products = this.products.filter((p) => p.id !== id)
         return true
       } catch (error) {
-        console.error("O'chirishda xato:", error)
+        console.error("Error:", error)
         return false
       }
     },
